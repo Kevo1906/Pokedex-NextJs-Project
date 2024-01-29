@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Pokemon {
+  id Int @id @default(autoincrement())
+  name String 
+  img_anime String @default("https://e7.pngegg.com/pngimages/706/299/png-clipart-pokemon-pokeball-illustration-pikachu-ash-ketchum-pokemon-coloring-book-pokeball-rim-pokemon.png")
+  img_game String @default("https://e7.pngegg.com/pngimages/112/329/png-clipart-minecraft-pixel-art-poke-ball-drawing-pokeball-opening-mincraft-rectangle-logo.png")
+  hp Int
+  attack Int
+  defense Int
+  speed Int  @default(0)
+  height Int  @default(0)
+  weight Int  @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  deletedAt DateTime?
+  types Type[] 
+}
+
+model Type {
+  id Int @id @default(autoincrement())
+  name String
+  pokemons Pokemon[]
+}
