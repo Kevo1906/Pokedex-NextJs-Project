@@ -21,7 +21,7 @@ export default function Cards(){
     console.log(pokemonsToShow)
     return(
         <div className="flex justify-center items-center mt-24 flex-wrap">
-            {pokemonsToShow.map((element:PokemonWithType) =><Card key={element.id} pokemon={element}/>)}
+            {pokemonsToShow.length && pokemonsToShow.map((element:PokemonWithType) =><Card key={element.id} pokemon={element}/>)}
         </div>
     )
 }
