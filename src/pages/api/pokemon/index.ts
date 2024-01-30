@@ -1,10 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { Pokemon, PrismaClient } from "@prisma/client";
+import { Pokemon,Type, PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Array<Pokemon> | { message: string }>
+  res: NextApiResponse<Array<Pokemon& {
+    types: Type[];}> | { message: string }>
 ) {
   console.log(req.query);
   if (req.method === "GET") {
