@@ -8,7 +8,7 @@ type CardProps = {
     pokemon: PokemonWithType
 }
 export default function Card({ pokemon }: CardProps) {
-    return (
+    return (pokemon && pokemon.img_anime &&
         <div className={style.card}>
       <div className={style.content}>
         <div className={style.back}>
