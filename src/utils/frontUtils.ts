@@ -1,5 +1,5 @@
 
-export const typeColor = {
+export const typeColor: { [key: string]: string } = {
     bug: "#26de81",
     dragon: "#ffeaa7",
     electric: "#fed330",

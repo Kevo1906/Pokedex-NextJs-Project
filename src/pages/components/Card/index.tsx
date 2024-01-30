@@ -26,7 +26,7 @@ export default function Card({ pokemon }: CardProps) {
               </div>
               <div className={style.card_footer}>
                 {pokemon.types.map((type,index) =>(<span key={index} 
-                 style={{ backgroundColor: typeColor[type.name]}}>{type.name}</span>) )}
+                 style={{ backgroundColor: typeColor[type.name] || "#fff"}}>{type.name}</span>) )}
               </div>
             </div>
           </div>
