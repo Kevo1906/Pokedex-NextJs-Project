@@ -1,0 +1,162 @@
+.card{
+    overflow: visible; /* cambiar */  
+    width: 250px;
+    height: 300px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    animation: floating 2.6s infinite ease-in-out;
+    outline: none;
+  }
+  
+  .content {
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform-style: preserve-3d;
+    transition: transform 800ms ease-in-out;
+    border-radius: 20%;
+    border: none;
+    outline: none;
+  }
+  
+  .front, .back {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: inherit;
+    overflow: hidden;
+    outline: none;
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f82cc357-e354-4ef7-8b2d-647f6f756800/dbf1jrd-095f7fd1-e33b-4e26-b456-8cbf40d0e5d1.png/v1/fill/w_1024,h_765,q_80,strp/quien_es_ese_pokemon__who_s_that_poke___by_shikomt_by_shikomt_dbf1jrd-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzY1IiwicGF0aCI6IlwvZlwvZjgyY2MzNTctZTM1NC00ZWY3LThiMmQtNjQ3ZjZmNzU2ODAwXC9kYmYxanJkLTA5NWY3ZmQxLWUzM2ItNGUyNi1iNDU2LThjYmY0MGQwZTVkMS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.YZOIomNz5t-pjv59EuK-mtru0QgjhlTtGEGPLuzR1hM);
+    background-size: cover;
+  }
+  
+  .back {
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    outline: none;
+    
+  }
+  
+  .back_img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    outline: none;
+    filter: brightness(0%);
+  }
+  
+  .card:hover .content {
+    transform: rotateY(180deg);
+    
+  }
+  
+  .front {
+    transform: rotateY(180deg);
+    
+    color: white;
+  }
+  
+  .front .front_content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .front_img{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    
+    z-index: -100;
+  }
+  
+  
+  
+  .description {
+    
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    background-color: rgb(97,65,166);
+    
+    
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  
+  }
+  
+  .title {
+    font-size: 11px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .name{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 200;
+    color: #fff;
+    text-decoration: none;
+  }
+  .nameLink{
+    text-decoration: none;
+  }
+  
+  .card_footer {
+    color: #CC6B3E;
+    margin-top: 5px;
+    font-size: 13px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+  }
+  .card_footer span{
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 50px;
+    color: #3f5165;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .front .img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(10px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }

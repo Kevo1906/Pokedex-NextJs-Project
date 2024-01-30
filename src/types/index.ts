@@ -5,8 +5,12 @@
 //   const iPokeData = Convert.toIPokeData(json);
 //
 // These functions will throw an error if the JSON doesn't
-// match the expected interface, even if the JSON is valid.
 
+import { Pokemon, Type as TypePoke } from "@prisma/client";
+
+// match the expected interface, even if the JSON is valid.
+export type PokemonWithType = Pokemon & {
+    types: TypePoke[];}
 export interface IPokeData {
     abilities:                Ability[];
     base_experience:          number;
