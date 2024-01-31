@@ -1,0 +1,271 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.cardContainer {
+    width: 300px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition-duration: .5s;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-right: 70px;
+    margin-top: 100px;
+    animation: flotar 3s ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .profileimg {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+    justify-content: center;
+    transition-duration: .5s;
+    color: rgb(155, 155, 155);
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    border: none;
+  }
+  
+  .cardContainer:hover .profileimg {
+    transform: translateX(-25%) translateY(-20%);
+    transition-duration: .5s;
+  }
+  
+  .infoDiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #323232;
+    z-index: 1;
+    border-radius: 50px;
+
+  }
+  
+  .nameDiv {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #323232;
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    gap: 2px;
+    border-radius: 50px;
+  }
+  
+  .name {
+    margin: 0;
+    padding: 0;
+    right: 10px;
+    font-size: 20px;
+    font-weight: 00;
+    color: #fff;
+  }
+  
+  .role {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(189, 175, 175);
+    margin-bottom: 5px;
+  }
+  
+  .socialDiv {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(235, 229, 229);
+    gap: 25px;
+  }
+  
+  .infoDiv a {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .socials {
+    width: 60%;
+    fill: #fff;
+  }
+
+.social_link2:hover {
+  background-color: #0a66c2;
+  animation: bounce_613 0.4s linear;
+}
+
+.social_link1:hover {
+    background-color: #1a1e22;
+    animation: bounce_613 0.4s linear;
+  }
+
+  .social_link3:hover {
+    background-color: #12a50b;
+    animation: bounce_613 0.4s linear;
+  }  
+.social_link4:hover {
+    background-color: #1d4292;
+    animation: bounce_613 0.4s linear;
+  }
+
+.infoContainer{
+    display: flex;
+}
+.aboutContainer {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 150px;
+    border: none;
+    border-radius: 50px;
+    animation: flotar 3s ease-in-out;
+    animation-iteration-count: infinite;
+    
+}
+.aboutCard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+    width: 500px;
+    padding: 20px 0;
+    background-color: #323232;
+    transition: all 0.8s ease;
+    border-radius: inherit;
+    margin: 0;
+    
+}
+.abouth6{
+    color: rgb(189, 175, 175);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 5px;
+    font-size: 20px;
+    position: relative;
+    left: 30px;
+}
+.aboutName{
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+    left: 30px;
+    letter-spacing:5px;
+    font-weight: 500;
+}
+.aboutHover_content{
+    overflow: hidden;
+    max-height: fit-content;
+    transform: translateY(10px);
+    transition: all 0.8s ease-in-out;
+    
+}
+.aboutHover_content p {
+    margin: 15px 30px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: 'Bebas Neue', sans-serif; 
+    text-align: justify;
+}
+
+.tecnologies{
+    margin:30px;
+    display: flex;
+}
+.t_icon{
+    height: 40px;
+    max-width: 70px;
+    margin-right: 10px;
+    
+   
+
+}
+.t_icon:hover{
+    animation: bounce_613 0.4s linear
+}
+.btn_repo{
+    padding: 10px 20px;
+    background-color: #151515;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.btn_repo:hover{
+    background-color: var(--color-contrast)
+}
+.h1{
+    position: absolute;
+    color: black;
+    padding: 10px 20px;
+    background-color: #CC6B3E;
+    font-size: 20px;
+    font-weight: 600;
+    animation: flotar 3s ease-in-out;
+    animation-iteration-count: infinite;
+    top:80px;
+    left: 500px;
+    border-radius: 50px;
+    
+}
+@keyframes bounce_613 {
+    40% {
+      transform: scale(1.4);
+    }
+  
+    60% {
+      transform: scale(0.8);
+    }
+  
+    80% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes flotar {
+    0% {
+     transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+   }

@@ -4,11 +4,12 @@ import { Pokemon,Type } from "@prisma/client"
 import type { PokemonWithType } from "@/types"
 import Card from "../Card"
 export default function Cards(){
-    const {Pokemons,fetchPokemons,page} = usePokemonStore()
+    const {Pokemons,fetchPokemons,fetchTypes,page, filters} = usePokemonStore()
     const [pokemonsToShow, setPokemonsToShow]:Array<PokemonWithType>&any = useState(Pokemons)
 
     useEffect(()=>{
-        fetchPokemons()
+        fetchPokemons(filters)
+        fetchTypes()
         setPokemonsToShow(Pokemons)
     },[fetchPokemons])
 
@@ -18,10 +19,14 @@ export default function Cards(){
         }
     },[page, Pokemons])
 
+    useEffect(()=>{
+        fetchPokemons(filters)
+    },[filters])
+
     console.log(pokemonsToShow)
     return(
         <div className="flex justify-center items-center mt-24 flex-wrap">
-            {pokemonsToShow.length && pokemonsToShow.map((element:PokemonWithType) =><Card key={element.id} pokemon={element}/>)}
+            {pokemonsToShow.length? pokemonsToShow.map((element:PokemonWithType) =><Card key={element.id} pokemon={element}/>):<p>Pokemons not Found</p>}
         </div>
     )
 }

@@ -7,38 +7,40 @@ export default async function handler(
   res: NextApiResponse<Array<Pokemon& {
     types: Type[];}> | { message: string }>
 ) {
-  console.log(req.query);
   if (req.method === "GET") {
     try {
-      const { name } = req.query;
+      let filters:any = {}
+      let orders:any = {}
+      const { name, order, source, types  } = req.query;
+      filters['deletedAt'] = null
       if (name && typeof name === "string") {
         const nameCleaned = name.replace(" ", "").toLowerCase();
+        filters['name']={contains:nameCleaned}
+      }
+      if(source && typeof source === "string") {
+        if(source==='api') filters['id'] = {lt:11000}
+        if(source==='created') filters['id'] = {gte:11000}
+      }
+      if(types && typeof types === "string") filters['types']={some:{name:types}}
 
-        const pokemonsFound = await prisma.pokemon.findMany({
-          where: {
-            name: { contains: nameCleaned },
-            deletedAt:null
-          },
-          include: {
-            types: true,
-          },
-        });
-        if (!pokemonsFound.length) {
-          res.status(400).json({ message: "Pokemon not found" });
-        }
-        res.status(200).json(pokemonsFound);
+      if(!order){
+        orders['name'] = 'asc'
+      } else {
+        orders['name'] = 'desc'
       }
 
-      const allPokemons = await prisma.pokemon.findMany({
-        where:{
-            deletedAt:null
-        },
+      const pokemonsFound = await prisma.pokemon.findMany({
+        where:filters,
+        orderBy:orders,
         include: {
           types: true,
         },
       });
+      if (!pokemonsFound.length) {
+        res.status(400).json({ message: "Pokemon not found" });
+      }
 
-      res.status(200).json(allPokemons);
+      res.status(200).json(pokemonsFound);
     } catch (error: any) {
       res.status(404).json({ message: error.message });
     }
