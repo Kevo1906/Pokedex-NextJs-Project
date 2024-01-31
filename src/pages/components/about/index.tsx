@@ -32,8 +32,8 @@ export default function AboutComponent(){
                     <div className={style.abouth6}>Fullstack Developer</div>
                     <a href="https://github.com/Kevo1906/Pokedex-NextJs-Project" className={style.btn_repo} target="_blank">Repository</a>
                     <div className={style.aboutHover_content}>
-                        <p>Hey there! I'm a Fullstack Developer and Machine Learning Engineer. I'm all about tech and solving problems. I've got skills in HTML, CSS, JavaScript, Next JS, Tailwind JS, Prisma JS, React, Node.js, Express, Python, TensorFlow, and Django. My jam is creating cool and efficient web solutions that make life better for folks. I've got a solid background in computer science and machine learning, so I can bring some data science magic to real-world projects.</p>
-                        <p>If you're up for teaming up on an awesome project or just wanna chat tech, don't hesitate to hit me up! You can also check out the tech stack I used in this project:</p>
+                        <p>Hey there! I&apos;m a Fullstack Developer and Machine Learning Engineer. I&apos;m all about tech and solving problems. I&apos;ve got skills in HTML, CSS, JavaScript, Next JS, Tailwind JS, Prisma JS, React, Node.js, Express, Python, TensorFlow, and Django. My jam is creating cool and efficient web solutions that make life better for folks. I&apos;ve got a solid background in computer science and machine learning, so I can bring some data science magic to real-world projects.</p>
+                        <p>If you&apos;re up for teaming up on an awesome project or just wanna chat tech, don&apos;t hesitate to hit me up! You can also check out the tech stack I used in this project:</p>
                         <div className={style.tecnologies}>
                             <img src="/img/nextjs-icon.png" alt="next-icon" className={style.t_icon}/>
                             <img src="/img/prisma.212x256.png" alt="prisma-icon" className={style.t_icon}/>
