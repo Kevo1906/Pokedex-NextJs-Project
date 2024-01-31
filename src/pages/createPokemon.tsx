@@ -278,11 +278,12 @@ export default function CreatePokemon() {
           <div>
           {PokemonTypes.map((type) => (
             
-            <label className='rounded-3xl text-[10px] py-1 px-3 m-1 text-slate-700' style={{ backgroundColor: typeColor[type.name] }}>
+            <label key={type.id} className='rounded-3xl text-[10px] py-1 px-3 m-1 text-slate-700' style={{ backgroundColor: typeColor[type.name] }}>
               <input
                 type="checkbox"
                 name="types"
                 value={type.id}
+                key={type.id}
                 checked={pokemonToCreate.types.includes(type.id)}
                 onChange={handleTypeChange}
               />
