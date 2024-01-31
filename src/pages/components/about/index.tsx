@@ -5,7 +5,7 @@ export default function AboutComponent(){
         <h1 className={style.h1}>About the developer:</h1>
         <div className={style.infoContainer}>
         <div className={style.cardContainer}>
-            <img className={style.profileimg} src='/img/photo1675370435.jpg' alt="Me"></img>
+            <img className={style.profileimg} src="/img/photo1675370435.jpg" alt="Me"></img>
             <div className={style.infoDiv}>
                 <div className={style.nameDiv}>
                     <p className={style.name}>Kevin Padilla</p>
@@ -35,8 +35,8 @@ export default function AboutComponent(){
                         <p>Hey there! I'm a Fullstack Developer and Machine Learning Engineer. I'm all about tech and solving problems. I've got skills in HTML, CSS, JavaScript, Next JS, Tailwind JS, Prisma JS, React, Node.js, Express, Python, TensorFlow, and Django. My jam is creating cool and efficient web solutions that make life better for folks. I've got a solid background in computer science and machine learning, so I can bring some data science magic to real-world projects.</p>
                         <p>If you're up for teaming up on an awesome project or just wanna chat tech, don't hesitate to hit me up! You can also check out the tech stack I used in this project:</p>
                         <div className={style.tecnologies}>
-                            <img src='/img/nextjs-icon.png' alt="next-icon" className={style.t_icon}/>
-                            <img src='/img/prisma.212x256.png' alt="prisma-icon" className={style.t_icon}/>
+                            <img src="/img/nextjs-icon.png" alt="next-icon" className={style.t_icon}/>
+                            <img src="/img/prisma.212x256.png" alt="prisma-icon" className={style.t_icon}/>
                             <img src="/img/html.png" alt="html-icon" className={style.t_icon}/>
                             <img src="/img/javascript.png" alt="javascript_icon" className={style.t_icon}/>
                             <img src="/img/css.png" alt="css-icon" className={style.t_icon}/>
